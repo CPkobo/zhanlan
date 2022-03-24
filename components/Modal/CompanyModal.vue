@@ -3,12 +3,16 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <h1 class="title block">{{ name }}</h1>
+        <h1 class="title block">{{ state.name }}</h1>
         <!-- <h2 class="subtitle block">詳細情報</h2> -->
       </header>
       <section class="modal-card-body">
         <div class="content">
-          <p>会社紹介 ダミーダミーダミー</p>
+          <span class="tag is-black is-pulled-right">{{ state.category }}</span>
+          <p>{{ state.description }}</p>
+          <p>
+            <a :href="state.website">{{ state.website }}</a>
+          </p>
           <div class="field">
             <label class="label">来場申し込み</label>
             <div class="control">
@@ -45,12 +49,11 @@
 </template>
 
 <script setup>
-import { useInquiring, useModal } from "../../composables/modal";
-const name = useInquiring();
+import { useCompany } from "../../composables/modal";
+const { state, close } = useCompany();
 const modal = useModal();
-
 const closeModal = () => {
+  close();
   modal.value = false;
-  name.value = "";
 };
 </script>

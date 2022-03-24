@@ -6,10 +6,7 @@ export default defineNuxtConfig({
         'bulma'
         // "~/assets/styles/app.scss"
     ],
-    publicRuntimeConfig: {
-        skyway: ""
-    },
     privateRuntimeConfig: {
-        // skyway: ""
+        mcms: process.env.MICRO_CMS
     }
 })

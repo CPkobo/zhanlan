@@ -1,14 +1,9 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" /> -->
   <main>
     <HeaderNav />
-
-    <TileMock />
-    <div v-for="(datum, dx) in data" :key="'data' + dx">
-      <TileAncestor :ancestor="datum" />
-    </div>
+    <p @click="debug">---{{ company.state.name }}---</p>
     <CompanyModal :class="{ 'is-active': modal }" />
+    <GalleryBoxes :data="data" />
     <FooterNav />
   </main>
 </template>
@@ -17,16 +12,17 @@
 import { defineComponent } from "vue";
 import HeaderNav from "../components/HeaderNav.vue";
 import FooterNav from "../components/FooterNav.vue";
-import TileAncestor from "../components/Tiles/TileAncestor.vue";
-import TileMock from "../components/Tiles/TileMock.vue";
+import GalleryBoxes from "../components/FlexGallery/GalleryBoxes.vue";
 import CompanyModal from "../components/Modal/CompanyModal.vue";
-import { useData } from "../composables/datas";
-import { useModal } from "../composables/modal";
-// import HelloWorld from "./components/HelloWorld.vue";
+// import { useCompany } from "../composables/modal";
+// import { useGallery } from "../composables/galleries";
 
-const data = useData();
+const data = useGallery();
+const company = useCompany();
 const modal = useModal();
-// console.log(data.value);
+const debug = () => {
+  console.log(company.state.value);
+};
 </script>
 
 <style lang="scss">
