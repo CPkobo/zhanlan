@@ -9,7 +9,7 @@
       <section class="modal-card-body">
         <div class="content">
           <span class="tag is-black is-pulled-right">{{ state.category }}</span>
-          <p>{{ state.description }}</p>
+          <p>{{ state.summary }}</p>
           <p>
             <a :href="state.website">{{ state.website }}</a>
           </p>

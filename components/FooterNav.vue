@@ -3,25 +3,21 @@
     <div class="columns">
       <div class="column">
         <ul>
-          <li>AAAAA</li>
-          <li>BBBBB</li>
-          <li>CCCCC</li>
+          <li>輸出展示会について</li>
         </ul>
       </div>
       <div class="column">
         <ul>
-          <li>DDDDD</li>
-          <li>EEEEE</li>
-          <li>FFFFF</li>
+          <li>本サイトについて</li>
         </ul>
       </div>
-      <div class="column">
+      <!-- <div class="column">
         <ul>
           <li>GGGGG</li>
           <li>HHHHH</li>
           <li>IIIII</li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>

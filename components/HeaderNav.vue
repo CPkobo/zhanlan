@@ -2,13 +2,12 @@
   <header>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        <nuxt-link class="navbar-item" to="/">
           <img
-            src="https://bulma.io/images/bulma-logo.png"
-            width="112"
-            height="28"
+            src="/text-logo.png"
+            alt="金橋省輸出展示会2022"
           />
-        </a>
+        </nuxt-link>
 
         <a
           role="button"
@@ -25,24 +24,26 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item"> Home </a>
+          <!-- <a class="navbar-item"> Home </a> -->
 
-          <a class="navbar-item"> Documentation </a>
+          <nuxt-link class="navbar-item" to="/">展示会について</nuxt-link>
 
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link"> More </a>
+            <nuxt-link class="navbar-link" to="/"> 出展企業一覧 </nuxt-link>
 
             <div class="navbar-dropdown">
-              <a class="navbar-item"> About </a>
-              <a class="navbar-item"> Jobs </a>
-              <a class="navbar-item"> Contact </a>
-              <hr class="navbar-divider" />
-              <a class="navbar-item"> Report an issue </a>
+              <nuxt-link class="navbar-item" to="/"> 工業 </nuxt-link>
+              <nuxt-link class="navbar-item" to="/"> 紡績 </nuxt-link>
+              <nuxt-link class="navbar-item" to="/"> アパレル </nuxt-link>
+              <!-- <hr class="navbar-divider" />
+              <a class="navbar-item"> Report an issue </a> -->
             </div>
           </div>
+
+          <nuxt-link class="navbar-item" to="/">来場予約</nuxt-link>
         </div>
 
-        <div class="navbar-end">
+        <!-- <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
               <a class="button is-primary">
@@ -51,7 +52,7 @@
               <a class="button is-light"> Log in </a>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </nav>
   </header>
