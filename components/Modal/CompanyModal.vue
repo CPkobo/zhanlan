@@ -32,6 +32,7 @@
             </div>
           </div>
           <button class="button is-fullwidth is-success mb-3">送信</button>
+          <button class="button is-fullwidth is-primary mb-3" @click="moveToIndividual">詳細へ</button>
           <button class="button is-fullwidth is-danger" @click="closeModal">
             キャンセル
           </button>
@@ -56,4 +57,10 @@ const closeModal = () => {
   close();
   modal.value = false;
 };
+const moveToIndividual = () => {
+  const router = useRouter()
+  const index = state.value.index
+  closeModal()
+  router.push(`/individual/${index}`)
+}
 </script>

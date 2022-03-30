@@ -4,7 +4,7 @@
     <HeroImage />
     <h2 class="title is-2 has-text-centered mt-5">主な出展商品</h2>
     <p class="is-size-3 has-text-centered">画像クリックで詳細表示</p>
-    <GalleryBoxes />
+    <GalleryBoxes :data="data" />
     <CompanyModal :class="{ 'is-active': modal }" />
     <FooterNav />
   </main>
@@ -23,6 +23,16 @@ import CompanyModal from "../components/Modal/CompanyModal.vue";
 // const data = useGallery();
 const company = useCompany();
 const modal = useModal();
+const { data } = await useLazyFetch<CompanyInfo[]>("/api/getImages", {key: 'gallery'});
+const refresh = () => refreshNuxtData('gallery')
+// refreshNuxtData('gallery')
+// watch(data.value, (newPosts) => {
+  // Because posts starts out null, you won't have access
+  // to its contents immediately, but you can watch it.
+// })
+// refresh(true).then(() => {
+//   data.value = data.value
+// })
 </script>
 
 <style lang="scss">

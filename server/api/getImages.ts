@@ -17,7 +17,6 @@ export default (req: IncomingMessage, res: ServerResponse) => {
         queries: { limit: 0 }
       })
       .then(meta => {
-        // console.log(meta)
         const indices = randRange(1, meta.totalCount, 18)
         const queries: string[] = []
         indices.forEach(val => {
@@ -35,7 +34,7 @@ export default (req: IncomingMessage, res: ServerResponse) => {
             // queries: { filters: `name[equals]${name}` }
           })
           .then(res => {
-            resolve(res)
+            resolve(res.contents)
           })
           .catch(err => reject(err))
       })

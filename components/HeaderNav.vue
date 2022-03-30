@@ -2,12 +2,12 @@
   <header>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <nuxt-link class="navbar-item" to="/">
+        <NuxtLink class="navbar-item" to="/">
           <img
             src="/text-logo.png"
             alt="金橋省輸出展示会2022"
           />
-        </nuxt-link>
+        </NuxtLink>
 
         <a
           role="button"
@@ -26,21 +26,22 @@
         <div class="navbar-start">
           <!-- <a class="navbar-item"> Home </a> -->
 
-          <nuxt-link class="navbar-item" to="/">展示会について</nuxt-link>
+          <NuxtLink class="navbar-item" to="/">展示会について</NuxtLink>
 
           <div class="navbar-item has-dropdown is-hoverable">
-            <nuxt-link class="navbar-link" to="/"> 出展企業一覧 </nuxt-link>
+            <NuxtLink class="navbar-link" to="/"> 出展企業一覧 </NuxtLink>
 
             <div class="navbar-dropdown">
-              <nuxt-link class="navbar-item" to="/"> 工業 </nuxt-link>
-              <nuxt-link class="navbar-item" to="/"> 紡績 </nuxt-link>
-              <nuxt-link class="navbar-item" to="/"> アパレル </nuxt-link>
+              <NuxtLink class="navbar-item" to="/category/industrial"> 工業 </NuxtLink>
+              <NuxtLink class="navbar-item" to="/category/construct"> 建材 </NuxtLink>
+              <NuxtLink class="navbar-item" to="/category/apparel"> アパレル </NuxtLink>
+              <NuxtLink class="navbar-item" to="/category/gift">ギフト・日用品</NuxtLink>
               <!-- <hr class="navbar-divider" />
               <a class="navbar-item"> Report an issue </a> -->
             </div>
           </div>
 
-          <nuxt-link class="navbar-item" to="/">来場予約</nuxt-link>
+          <NuxtLink class="navbar-item" to="/">来場予約</NuxtLink>
         </div>
 
         <!-- <div class="navbar-end">

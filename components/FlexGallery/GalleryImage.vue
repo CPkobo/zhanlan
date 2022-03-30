@@ -4,8 +4,8 @@
       <img
         :src="datum.imgs[index].img.url"
         :alt="datum.imgs[index].alt"
-        :width="datum.imgs[index].img.width + 'px'"
-        :height="datum.imgs[index].img.height + 'px'"
+        :width="datum.imgs[index].img.width"
+        :height="datum.imgs[index].img.height"
         @click="toggleModal" />
     </div>
   </div>
