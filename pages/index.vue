@@ -17,22 +17,10 @@ import FooterNav from "../components/FooterNav.vue";
 import HeroImage from "../components/Hero/HeroImage.vue"
 import GalleryBoxes from "../components/FlexGallery/GalleryBoxes.vue";
 import CompanyModal from "../components/Modal/CompanyModal.vue";
-// import { useCompany } from "../composables/modal";
-// import { useGallery } from "../composables/galleries";
 
-// const data = useGallery();
 const company = useCompany();
 const modal = useModal();
 const { data } = await useLazyFetch<CompanyInfo[]>("/api/getImages", {key: 'gallery'});
-const refresh = () => refreshNuxtData('gallery')
-// refreshNuxtData('gallery')
-// watch(data.value, (newPosts) => {
-  // Because posts starts out null, you won't have access
-  // to its contents immediately, but you can watch it.
-// })
-// refresh(true).then(() => {
-//   data.value = data.value
-// })
 </script>
 
 <style lang="scss">

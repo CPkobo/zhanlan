@@ -13,5 +13,4 @@ const catname = typeof route.params.catname === 'string'
   ? route.params.catname
   : route.params.catname.join("")
 const { data: infos } = await useFetch(`/api/getByCategory?catname=${catname}`)
-
 </script>
