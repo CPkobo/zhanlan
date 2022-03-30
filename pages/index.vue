@@ -1,9 +1,9 @@
 <template>
   <main>
     <HeaderNav />
-    <p @click="debug">---{{ company.state.name }}---</p>
     <CompanyModal :class="{ 'is-active': modal }" />
-    <GalleryBoxes :data="data" />
+    <GalleryBoxes />
+    
     <FooterNav />
   </main>
 </template>
@@ -17,12 +17,9 @@ import CompanyModal from "../components/Modal/CompanyModal.vue";
 // import { useCompany } from "../composables/modal";
 // import { useGallery } from "../composables/galleries";
 
-const data = useGallery();
+// const data = useGallery();
 const company = useCompany();
 const modal = useModal();
-const debug = () => {
-  console.log(company.state.value);
-};
 </script>
 
 <style lang="scss">

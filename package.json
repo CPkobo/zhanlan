@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bulma": "^0.9.3",
+    "microcms-js-sdk": "^2.0.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "skyway-js": "^4.4.3"
